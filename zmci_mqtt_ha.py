@@ -9,13 +9,6 @@ from zmci_tool import ZeroCloudInterface
 
 class ZeroCloudInterfaceHA(hass.Hass):
     def initialize(self):
-        # Load .env to get credentials
-
-        # ZERO_USER = "stephenmhall@hotmail.com"
-        # ZERO_PASS = "Rocket32300"
-        # MQTT_HOST = "192.168.0.39"
-        # MQTT_USER = "hass"
-        # MQTT_PASS = "Rocket32300"
 
         # Zero Creds
         self.user_name = self.args["user_name"]
