@@ -1,0 +1,36 @@
+---
+hello_world:
+  module: hello
+  class: HelloWorld
+pixel_switch:
+  module: pixel
+  class: PixelSwitch
+  log: pixel
+  start_time: input_datetime.pixel_start
+  sensors:
+    batt_level: sensor.pixel_6_battery_level
+    batt_state: sensor.pixel_6_battery_state
+  switches:
+    charger: switch.smart_power_strip_pro_socket_1
+    
+set_discharge_rate:
+  module: set_discharge_rate
+  class: HouseBatteryDischarge
+
+set_charge_rate:
+  module: set_charge_rate
+  class: HouseBatteryCharge
+
+get_discharge_rate:
+  module: get_inverter_settings
+  class: InverterSettings
+
+zmci_mqtt:
+  module: zmci_mqtt_ha
+  class: ZeroCloudInterfaceHA
+  log: zmci
+  user_name: !secret ZERO_USER
+  user_pass: !secret ZERO_PASS
+  mqtt_broker: !secret MQTT_HOST
+  mqtt_user: !secret MQTT_USER
+  mqtt_pass: !secret MQTT_PASS
