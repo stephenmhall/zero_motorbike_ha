@@ -1,0 +1,16 @@
+mqtt:
+  sensor:    
+    - state_topic: "homeassistant/motorcycle/soc"
+      name: "zero_battery"
+
+    - state_topic: "homeassistant/motorcycle/mileage"
+      name: "zero_mileage"
+
+    - state_topic: "homeassistant/motorcycle/charging"
+      name: "zero_charging"
+
+    - state_topic: "homeassistant/motorcycle/tipover"
+      name: "zero_tipover"
+
+    - state_topic: "homeassistant/motorcycle/chargingtimeleft"
+      name: "zero_chargingtimeleft"
